@@ -31,7 +31,7 @@ namespace Ovn5.ConcreteClass
 
 
 
-        public Bus(string name, string regNo, string color) : base(name, regNo, color)
+        public Bus(string name, string regNo, string color, int noOfSeat) : base(name, regNo, color)
         {
             NoOfSeats = noOfSeat;   //initial value
 
@@ -41,9 +41,8 @@ namespace Ovn5.ConcreteClass
 
         public override string ToString()
         {
-            string strOut = base.ToString();
+            string strOut = base.ToString() + $" Number of seats : {NoOfSeats} ";
 
-            strOut = $"\n Number of seats : {NoOfSeats} ";
 
             return strOut;
 

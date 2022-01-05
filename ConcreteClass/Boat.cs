@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ovn5.ConcreteClass
 {
-    public class Boat:Vehicle
+    public class Boat : Vehicle
     {
 
         private int noOfSpike;
@@ -30,7 +30,7 @@ namespace Ovn5.ConcreteClass
 
 
 
-        public Boat(string name, string regNo, string color) : base(name, regNo, color)
+        public Boat(string name, string regNo, string color, int noOfSpike) : base(name, regNo, color)
         {
             NoOfSpike = noOfSpike;   //initial value
 
@@ -40,9 +40,7 @@ namespace Ovn5.ConcreteClass
 
         public override string ToString()
         {
-            string strOut = base.ToString();
-
-            strOut = $"\n Number of Spikes : {NoOfSpike} ";
+            string strOut = base.ToString() + $" Number of Spikes : {NoOfSpike}."; 
 
             return strOut;
 

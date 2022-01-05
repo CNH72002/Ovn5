@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ovn5.ConcreteClass
 {
-    public class Car: Vehicle
+    public class Car : Vehicle
     {
 
         private double cylinderVol;
@@ -30,7 +30,7 @@ namespace Ovn5.ConcreteClass
 
 
 
-        public Car(string name, string regNo, string color) : base(name, regNo, color)
+        public Car(string name, string regNo, string color, double cylinderVol) : base(name, regNo, color)
         {
             CylinderVol = cylinderVol;   //initial value
 
@@ -40,9 +40,8 @@ namespace Ovn5.ConcreteClass
 
         public override string ToString()
         {
-            string strOut = base.ToString();
+            string strOut = base.ToString() + $", Cylinder Vol : {CylinderVol} ";
 
-            strOut = $"\n Cylinder Vol : {CylinderVol} ";
 
             return strOut;
 

@@ -30,7 +30,7 @@ namespace Ovn5.ConcreteClass
 
 
 
-        public Motocycle(string name, string regNo, string color) : base(name,regNo, color)
+        public Motocycle(string name, string regNo, string color, string fuelType) : base(name,regNo, color)
         {
             FuelType = fuelType;   //initial value
 
@@ -40,9 +40,7 @@ namespace Ovn5.ConcreteClass
 
         public override string ToString()
         {
-            string strOut = base.ToString();
-
-            strOut = $"\n Fuel Type : {FuelType} ";
+            string strOut = base.ToString() + $" Fuel Type : {FuelType} ";
 
             return strOut;
 
